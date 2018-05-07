@@ -7,6 +7,7 @@
     "update": "git submodule update --init --recursive",
     "test": "npm run test-js && npm run test-c",
     "test-js": "cross-env NODE_ENV=test TYPE=\"js\" mocha \"test/**/*.js\"",
+    "test-js-debug": "cross-env NODE_ENV=test TYPE=\"js\" mocha --inspect-brk=7171  \"test/**/*.js\"",
     "test-c": "cross-env NODE_ENV=test TYPE=\"c\" mocha \"test/**/*.js\"",
     "lint": "standard --verbose | snazzy"
   },
@@ -33,6 +34,7 @@
     "mocha": "^5.1.1",
     "mockery": "^2.1.0",
     "pre-push": "^0.1.1",
+    "sinon": "^5.0.6",
     "snap-shot-it": "^4.1.4",
     "snazzy": "^7.1.1",
     "standard": "^11.0.1",
